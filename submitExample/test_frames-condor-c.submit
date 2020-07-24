@@ -1,0 +1,23 @@
+universe = grid
+#+remote_DESIRED_Sites="Nebraska"
+grid_resource = condor stro.nikhef.nl condor-osg.ligo.caltech.edu
+use_x509userproxy = True
+executable = run_frames_test.sh
+transfer_input_files = frame_files_small.txt
+#executable = tf_matmul_wrapper.sh
+should_transfer_files = YES
+log = frames-condor-c.log
+error = test-frames-condor-c-$(cluster)-$(process)-$(node).err
+output = test-frames-condor-c-$(cluster)-$(process)-$(node).out
+notification = never
++remote_LigoSearchTag = "ligo.dev.o3.burst.paramest.bayeswave"
++LigoSearchTag = "ligo.dev.o3.burst.paramest.bayeswave"
++remote_SingularityImage = "/cvmfs/singularity.opensciencegrid.org/james-clark/research-projects-rit/rift:latest"
+#+SingularityCleanENv = True
+#+is_itb = True
++remote_requirements = True
++remote_jobuniverse = 5
++remote_ShouldTransferFiles = "YES"
++remote_WhenToTransferOutput = "ON_EXIT"
+Requirements = (TARGET.GLIDEIN_SITE=!=undefined) && (HAS_SINGULARITY =?= TRUE) && (IS_GLIDEIN =?= True)
+queue 1

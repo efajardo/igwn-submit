@@ -7,6 +7,10 @@ RUN yum -y install http://software.ligo.org/lscsoft/scientific/7/x86_64/producti
     yum -y install ldg-client && \
     yum -y install git
 
+RUN adduser submituser && \
+    mkdir /home/submituser/submitExample
+
+ADD submitExample /home/submituser
 ADD config.d/* /etc/condor/config.d/
 ADD condor_mapfile /etc/condor/certs/condor_mapfile
 ADD 10-condor.conf /etc/supervisord.d/
