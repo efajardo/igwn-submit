@@ -1,0 +1,7 @@
+GSI "/DC=org/DC=terena/DC=tcs/C=NL/L=Amsterdam/O=Nikhef/CN=stro.nikhef.nl" nikhef 
+GSI "^/DC=org/DC=incommon/C=US/ST=California/L=Pasadena/O=California Institute of Technology/OU=Laser Interferometer Gravitational-Wave Observatory/CN=ldas-osg.ligo.caltech.edu" ldas-osg
+GSI "^/CN=submit-osg-dev.ligo.uwm.edu" ldas-uwm
+GSI "^/DC=org/DC=incommon/C=US/ST=California/L=Pasadena/O=California Institute of Technology/OU=Laser Interferometer Gravitational-Wave Observatory/CN=ldas-osg.ligo-wa.caltech.edu" ldas-osg-wa
+GSI "^/DC=org/DC=incommon/C=US/ST=California/L=Pasadena/O=California Institute of Technology/OU=Laser Interferometer Gravitational-Wave Observatory/CN=ldas-osg.ligo-la.caltech.edu" ldas-osg-la
+GSI (.*) anonymous
+FS (.*) \1
