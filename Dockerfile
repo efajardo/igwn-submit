@@ -11,6 +11,7 @@ RUN adduser submituser && \
     mkdir /home/submituser/submitExample
 
 ADD submitExample/* /home/submituser/submitExample/
+RUN chown -R submituser:submituser /home/submituser/
 ADD config.d/* /etc/condor/config.d/
 ADD condor_mapfile /etc/condor/certs/condor_mapfile
 ADD 10-condor.conf /etc/supervisord.d/

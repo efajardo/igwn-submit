@@ -1,6 +1,6 @@
 universe = grid
 #+remote_DESIRED_Sites="Nebraska"
-grid_resource = condor stro.nikhef.nl condor-osg.ligo.caltech.edu
+grid_resource = condor ldas-osg.ligo.caltech.edu condor-osg.ligo.caltech.edu
 use_x509userproxy = True
 executable = run_frames_test.sh
 transfer_input_files = frame_files_small.txt
